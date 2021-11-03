@@ -1,0 +1,130 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url(../Rosa_de_Pedra_imagens/pexels2.jpg) no-repeat center/cover;
+}
+
+#background {
+  width: 85%;
+  max-width: 500px;
+  margin-top: 15px;
+  border-radius: 1rem;
+  background-color: rgba(233, 202, 229, 0.774);
+  box-shadow: 0 0 5px 1px rgb(80, 42, 78);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  width: 100%;
+  border-radius: 1em;
+}
+
+#divHome {
+  width: 60px;
+  padding: 5px;
+  left: 10px;
+}
+
+#aHome {
+  width: 100%;
+  height: 100%;
+}
+
+#imgHome {
+  width: 100%;
+  height: 100%;
+}
+
+legend {
+  text-align: center;
+  color: #2d0f41;
+  font-size: 20pt;
+  margin-top: 10px;
+  font-family: 'Merienda', cursive;
+  text-shadow: 0 2px 1px rgb(89, 35, 117), 0 3px 2px rgb(168, 81, 226);
+}
+
+#inkScratch {
+  width: 100%;
+  font-size: 18pt;
+  font-family: 'Philosopher', sans-serif;
+  color: #2d0f41;
+  padding: 30px 0px 22px 0px;
+  margin-top: 5px;
+  background: url(../Rosa_de_Pedra_PNG/riscoDeTinta.png) no-repeat center;
+}
+
+#regis {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+h3 {
+  font-family: 'Philosopher', sans-serif;
+  color: #2d0f41;
+  font-size: 18pt;
+  padding: 5px;
+  margin-top: 25px;
+}
+
+input {
+  border-radius: 4px;
+  border: none;
+  padding: 10px;
+  text-align: center;
+  font-size: 12pt;
+  width: 90%;
+  max-width: 300px;
+  margin: auto;
+  margin-top: 10px;
+  background-image: linear-gradient(rgba(179, 135, 209, 0.842), rgba(238, 228, 245, 0.842));
+}
+
+#cadPassword {
+  max-width: 150px;
+}
+
+::placeholder {
+  color: rgb(62, 18, 82);
+}
+
+#register {
+  margin-bottom: 20px;
+  font-family: 'Philosopher', sans-serif;
+  font-size: 18pt;
+  font-style: italic;
+  padding: 5px;
+  border-radius: 10px;
+  width: 130px;
+  border: none;
+  margin: auto;
+  margin-top: 45px;
+  background-image: linear-gradient(rgb(147, 87, 187), rgb(214, 173, 230));
+  text-shadow: rgba(73, 8, 73, 0.87) 1px 1px 1px;
+}
+
+#copyright {
+  width: 70%;
+  text-align: center;
+  margin: auto;
+  margin-top: 20px;
+  font-family: 'Philosopher', sans-serif;
+  color: #480f53;
+  border-top: 1px solid #522379;
+}

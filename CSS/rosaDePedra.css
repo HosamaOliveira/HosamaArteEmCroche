@@ -1,0 +1,311 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* * #body {  */
+
+/* width: 100%; */
+
+/* height: 100%; */
+
+/*  */
+
+/* } */
+
+#interface {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  /* background-color: brown; */
+  width: 100%;
+  height: 100vh;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#header {
+  display: flex;
+  position: relative;
+  width: 100%;
+  background-image: linear-gradient(rgba(147, 87, 187, 0.842), rgba(220, 208, 228, 0.842));
+  box-shadow: 0 0 6px 2px rgb(68, 44, 77);
+}
+
+#head {
+  width: 100%;
+  /* background-color: rgb(11, 47, 65); */
+}
+
+#siteName {
+  display: flex;
+  flex-direction: row;
+  /* background-color: lightseagreen; */
+}
+
+h1 {
+  font-family: 'Merienda', cursive;
+  font-size: 18pt;
+  margin-top: 5px;
+  margin-left: 5px;
+  color: #3a1955;
+  text-shadow: 1px 2px 1px rgb(223, 187, 233);
+}
+
+#phrase {
+  /* background-color: lightcoral; */
+  width: 100%;
+}
+
+h2 {
+  width: 60%;
+  height: 20px;
+  color: #3a1955;
+  font-family: 'Parisienne', cursive;
+  font-size: 14pt;
+  margin-top: 40px;
+  margin-left: 60px;
+  text-shadow: 1px 2px 1px rgba(140, 95, 156, 0.6);
+  /* background-color: chocolate; */
+}
+
+img#roseIcon {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  margin-top: 60px;
+  margin-left: -5px;
+  /* background-color: indigo; */
+}
+
+/* corpo */
+
+#bodySession {
+  width: 100%;
+  background-image: linear-gradient(to bottom, #d8c7e4, #7cd4a1);
+  /* background: url(../Rosa_de_Pedra_imagens/pexels7.jpg) no-repeat center/cover; */
+}
+
+#subSession {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 15px;
+  /* background-color: #7a35e0; */
+}
+
+#contents {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 650px;
+  text-align: center;
+  margin: auto;
+  padding: 10px;
+  text-shadow: blueviolet 1px 1px 1px;
+  box-shadow: 0 0 6px 2px rgb(68, 44, 77);
+  border-radius: 1rem;
+  background-color: rgba(172, 143, 184, 0.534);
+}
+
+#nov {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  font-size: 17pt;
+  padding: 10px;
+  font-family: 'Philosopher', sans-serif;
+  color: #401758;
+  text-shadow: rgb(70, 43, 226) 1px 1px 1px;
+  box-shadow: rgba(44, 68, 77, 0.952) 3px 3px 10px 0px;
+  border-radius: 5px;
+  /* background-color: darkgreen; */
+}
+
+#groot {
+  margin: auto;
+  width: 150px;
+  height: 150px;
+  margin-top: 10px;
+  border-radius: 50%;
+  /* background-color: #3a1955; */
+}
+
+#grootImg {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+#textCrochet {
+  /* background-color: hotpink; */
+  width: 90%;
+  margin: auto;
+  margin-top: 20px;
+  font-size: 14pt;
+  text-shadow: none;
+  color: #401758;
+}
+
+/* Footer */
+
+#rodape {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 10px;
+  background-image: linear-gradient(rgba(147, 87, 187, 0.815), rgba(220, 208, 228, 0.815));
+  /* clear: both; */
+}
+
+#registrationFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 95%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  /* background-color: #3a1955; */
+  background-image: linear-gradient(rgba(191, 153, 214, 0.671), rgba(163, 118, 189, 0.842));
+}
+
+h3 {
+  width: 90%;
+  height: 30%;
+  font-size: 15pt;
+  margin-top: 10px;
+  color: #480d53;
+  text-shadow: 0 0 3px rgba(214, 199, 224, 0.904);
+  margin-bottom: 20px;
+  font-family: 'Philosopher', sans-serif;
+}
+
+#registrationButtonFooter {
+  width: 150px;
+  font-size: 15pt;
+  margin-bottom: 10px;
+  font-family: 'Philosopher', sans-serif;
+  color: #6b187c;
+  text-shadow: 0 0 3px #6b187c;
+  padding: 5px;
+  border-radius: 1em;
+  box-shadow: 0 0 5px 1px rgb(60, 97, 97);
+  animation: registrationButtonFooter 1s infinite alternate;
+  /* -webkit-animation: registrationHover 2s infinite alternate; */
+  background-image: linear-gradient(rgba(57, 209, 90, 0.842), rgba(173, 221, 205, 0.842));
+}
+
+#iconFooter {
+  display: flex;
+  width: 200px;
+  /* background: chartreuse; */
+}
+
+.aFooter {
+  margin-top: 10px;
+  margin: auto;
+  transition: transform .5s;
+  /* background-color: blue; */
+}
+
+.imgFooter {
+  /* background-color: aqua; */
+  width: 50px;
+  /* margin-bottom: 40px; */
+}
+
+#copyright {
+  width: 90%;
+  padding-top: 10px;
+  margin-top: 15px;
+  font-family: 'Philosopher', sans-serif;
+  color: #480f53;
+  text-shadow: 0 0 1px #6b187c;
+  border-top: 1px solid #522379;
+}
+
+/* @keyframes */
+
+@keyframes registrationButtonFooter {
+  from {
+    transform: scale();
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+/* @-webkit-keyframes registrationButtonFooter {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+} */
+
+/* @Media */
+
+@media (min-width: 500px) {
+  #nov {
+    width: 60%;
+  }
+  #groot {
+    width: 170px;
+    height: 170px;
+  }
+  #textCrochet {
+    width: 75%;
+  }
+  #registrationFooter {
+    width: 85%;
+  }
+  h3 {
+    font-size: 18pt;
+  }
+}
+
+@media (min-width: 600px) {
+  #nov {
+    width: 55%;
+  }
+  #groot {
+    width: 180px;
+    height: 180px;
+  }
+  #textCrochet {
+    width: 65%;
+  }
+  #registrationFooter {
+    width: 75%;
+  }
+  h3 {
+    font-size: 21pt;
+  }
+}
+
+@media (min-width: 800px) {
+  #nov {
+    width: 50%;
+  }
+  #groot {
+    width: 200px;
+    height: 200px;
+  }
+  #textCrochet {
+    width: 55%;
+  }
+  #registrationFooter {
+    width: 65%;
+  }
+  h3 {
+    height: 50%;
+  }
+}

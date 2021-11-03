@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fotos</title>
+  <link rel="stylesheet" href="CSS/videoClasses.css">
+  <link rel="stylesheet" href="CSS/menuLateral.css">
+</head>
+
+<body>
+
+  <div id="interface">
+    <header id="header">
+
+      <div id="head">
+
+        <div id="siteName">
+          <h1>Rosa de Pedra</h1>
+        </div>
+
+        <div id="phrase">
+          <h2>Crochetando com amor..</h2>
+        </div>
+
+      </div>
+
+      <img id="roseIcon" src="Rosa_de_Pedra_PNG/rosa1.png"> 
+
+    </header>
+
+    <section id="bodySession">
+    
+      <h1>Vídeo-Aulas</h1>
+
+    </section>
+
+    <nav id="wholeMenu"></nav>
+
+      <input type="checkbox" id="menu-hamburguer">
+      
+      <label for="menu-hamburguer">
+        <div id="menu">
+          <span class="hamburguer"></span>
+        </div>
+      </label>
+
+      <div id="shadow" onclick="document.getElementById('menu-hamburguer').checked=false"></div>
+  
+      <nav id="sub-menu">
+    
+        <img src="Rosa_de_Pedra_PNG/folhas.png" id="sheets">
+        <div id="rose">
+          <h1 id="subMenuTitle">Rosa de Pedra</h1>
+        </div>
+
+        <div id="contentLink">  
+          <div class="link"><button class="naviMenu" id="home" onclick="navigate('home')">Home</button></div>
+          <div class="link"><button class="naviMenu" id="Photos" onclick="navigate('photos')">Galeria</button></div>
+          <div class="link"><button class="naviMenu" id="videoClasses" onclick="navigate('videoClasses')">Vídeo-Aulas</button></div>
+        </div>
+
+        <div id="iconLink">
+
+          <img src="Rosa_de_Pedra_PNG/caveiraCrochê.png" id="skull">
+
+          <div id="ico">
+
+            <a href="https://wa.me/5547992483265" target="blank" class="linkIcon" ><img class="ic" src="Rosa_de_Pedra_PNG/whats5.png"   alt="Whats"><br></a>
+            
+            <a href="https://www.facebook.com/Kafeskal/?ref=pages_you_manage" target="blank" class="linkIcon"><img   class="ic" src="Rosa_de_Pedra_PNG/facebook5.png" alt="facebook"><br></a>
+
+            <a href="" target="blank" class="linkIcon"><img class="ic" src="Rosa_de_Pedra_PNG/instagram4.png"   alt="instagram"><br></a>
+
+
+          </div>
+        </div>  
+        
+      </nav>
+  
+    </nav>
+  </div>
+  <script src="JS/rosaDePedra.js"></script>
+</body>
+</html>
