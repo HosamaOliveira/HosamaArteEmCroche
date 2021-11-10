@@ -42,12 +42,18 @@
 }
 
 h1 {
-  font-family:'Merienda', cursive;
-  font-size: 15pt;
+  font-family: 'Merienda', cursive;
+  font-size: 18pt;
   margin-top: 5px;
   margin-left: 5px;
   color: #3a1955;
-  text-shadow: 1px 2px 1px rgba(69, 45, 78, 0.6);
+  text-shadow: 1px 2px 1px rgb(223, 187, 233);
+}
+
+#title {
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 #phrase {
@@ -80,15 +86,12 @@ img#roseIcon {
 /* body */
 #bodySession {
   width: 100%;
-  background-image: linear-gradient(to bottom, #d8c7e4, #00ff6a, #bbb, #cc4d4d, #ccb94d, #ec3609, #444);
-  /* background-clip: text; */
-  /* -webkit-background-clip: text; */
-  /* -webkit-text-fill-color: transparent; */
-  /* color: rgb(0, 0, 0); */
+  background-image: linear-gradient(to bottom, hsla(276, 34%, 84%, 0.349), hsl(145, 100%, 50%, 0.349), hsl(0, 0%, 73%, 0.349), hsl(0, 55%, 55%, 0.349), hsl(51, 55%, 55%, 0.349), hsl(12, 93%, 48%, 0.349), hsl(0, 0%, 27%, 0.349));
 }
 
 #gallery {
   display: flex;
+  align-items: center;
   justify-content: center;
   font-family: 'Philosopher', sans-serif;
   font-size: 30pt;
@@ -116,7 +119,7 @@ img#roseIcon {
   grid-template-columns: repeat(6,1fr);
   grid-auto-rows: 300px;
   padding: 5px;
-  grid-gap: 5px;
+  grid-gap: 1px;
 }
 
 .itemGaleria {
@@ -183,7 +186,8 @@ img#roseIcon {
 
 @media (max-width:800px) {
   #containerGallery {
-    grid-template-columns: repeat(2,1fr);
+    width: 90%;
+    grid-template-columns: repeat(1,1fr);
     grid-auto-rows: 100vh;
   }
 
@@ -194,4 +198,5 @@ img#roseIcon {
   #tip {
     text-align: center;
   }
+
 }

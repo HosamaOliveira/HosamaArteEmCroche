@@ -12,6 +12,12 @@ function navigate(page) {
     case 'videoClasses':
       location.href = './videoClasses.html'
       break
+    case 'btRegistration':
+      location.href = './registration.html'
+      break
+    case 'title':
+      location.href = './index.html'
+      break
   }
 }
 
