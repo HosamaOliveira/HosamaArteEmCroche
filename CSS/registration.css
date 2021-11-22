@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,700;1,400;1,700&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -9,34 +9,18 @@
 
 body {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: url(../Rosa_de_Pedra_imagens/pexels2.jpg) no-repeat center/cover;
-}
-
-#background {
-  width: 85%;
-  max-width: 500px;
-  margin-top: 15px;
-  border-radius: 1rem;
-  background-color: rgba(233, 202, 229, 0.774);
-  box-shadow: 0 0 5px 1px rgb(80, 42, 78);
-}
-
-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin: auto;
   width: 100%;
-  border-radius: 1em;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url(../Rosa_de_Pedra_imagens/pexels2.jpg)no-repeat center/cover;
+  background-size: 100vw 100vh;
 }
 
 #divHome {
   width: 60px;
   padding: 5px;
-  left: 10px;
 }
 
 #aHome {
@@ -49,6 +33,30 @@ section {
   height: 100%;
 }
 
+
+#background {
+  width: 85%;
+  max-width: 500px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  border-radius: 1rem;
+  background-color: rgba(233, 202, 229, 0.774);
+  box-shadow: 0 0 5px 1px rgb(80, 42, 78);
+  padding-bottom: 15px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  width: 100%;
+  border-radius: 1em;
+  /* background-color: #2d0f41; */
+}
+
+
 legend {
   text-align: center;
   color: #2d0f41;
@@ -59,16 +67,24 @@ legend {
 }
 
 #inkScratch {
+  background: url(../Rosa_de_Pedra_PNG/riscoDeTinta.png) no-repeat center/cover;
+  margin-right: 60px;
   width: 100%;
-  font-size: 18pt;
+  min-height: 100%;
+  font-size: 14pt;
   font-family: 'Philosopher', sans-serif;
   color: #2d0f41;
-  padding: 30px 0px 22px 0px;
-  margin-top: 5px;
-  background: url(../Rosa_de_Pedra_PNG/riscoDeTinta.png) no-repeat center;
+  padding: 7px 10px 70px 10px;
+  margin-bottom: 20px;
+  text-shadow: 0 1px 1px #0000009f;
+}
+
+#number {
+  color: red;
 }
 
 #regis {
+  font-family: 'Philosopher', sans-serif;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -79,11 +95,11 @@ h3 {
   font-family: 'Philosopher', sans-serif;
   color: #2d0f41;
   font-size: 18pt;
-  padding: 5px;
-  margin-top: 25px;
+  margin: auto;
 }
 
 input {
+  outline: none;
   border-radius: 4px;
   border: none;
   padding: 10px;
@@ -92,8 +108,37 @@ input {
   width: 90%;
   max-width: 300px;
   margin: auto;
-  margin-top: 10px;
   background-image: linear-gradient(rgba(179, 135, 209, 0.842), rgba(238, 228, 245, 0.842));
+} 
+
+::selection { /*texto selecionado pelo mouse*/
+  background: rgb(49, 16, 80);
+  color: #ffffff;
+}
+
+/* mudar a cor do input */
+:-webkit-autofill,
+:-webkit-autofill:hover,
+:-webkit-autofill:focus {
+  box-shadow: inset 0 0 0 50px rgba(200, 135, 209, 0.842);
+  -webkit-box-shadow: inset 0 0 0 50px rgba(221, 163, 228, 0.842);
+}
+
+#cadName {
+  outline: none;
+}
+
+#cadMail:invalid {
+  border-color: rgb(90, 10, 10);
+  box-shadow: 0 0 2px 1px rgb(255, 51, 0);
+}
+
+#cadMail:focus {
+  outline: none;
+}
+
+#cadMail:focus:invalid {
+  box-shadow: none;
 }
 
 #cadPassword {
@@ -104,7 +149,19 @@ input {
   color: rgb(62, 18, 82);
 }
 
-#register {
+.divAnimatedButton {
+  margin: auto;
+  margin-top: 25px;
+  width: 26%;
+  text-align: center;
+  cursor: pointer;
+  color: rgb(27, 16, 48);
+  transition: all 0.3s;
+  position: relative;
+}
+
+
+.animatedButton {
   margin-bottom: 20px;
   font-family: 'Philosopher', sans-serif;
   font-size: 18pt;
@@ -114,17 +171,78 @@ input {
   width: 130px;
   border: none;
   margin: auto;
-  margin-top: 45px;
   background-image: linear-gradient(rgb(147, 87, 187), rgb(214, 173, 230));
   text-shadow: rgba(73, 8, 73, 0.87) 1px 1px 1px;
+  transition: all 0.3s;
 }
 
-#copyright {
+.animatedButton::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.3s;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-top-color: rgb(105, 19, 131);
+  border-bottom-color: rgb(105, 19, 131);
+  transform: scale(0.1, 1);
+}
+
+.animatedButton:hover {
+  letter-spacing: 1px;
+  /*alarga o botão*/
+  text-shadow: 0 1px 2px rgb(183, 70, 211);
+  background-image: linear-gradient(rgba(147, 87, 187, 0.74), rgb(214, 173, 230, 0.74));
+  box-shadow: 0 0 10px 1px rgb(91, 37, 99);
+}
+
+.animatedButton:active {
+  letter-spacing: 0;
+  background-image: linear-gradient(rgb(147, 87, 187), rgb(214, 173, 230));
+  box-shadow: 0 0 10px 1px rgb(198, 54, 218);
+}
+
+.animatedButton:hover::before {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+
+.animatedButton::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s;
+  background-color: rgba(121, 108, 240, 0.1);
+}
+
+.animatedButton:hover::after {
+  opacity: 0;
+  transform: scale(0.1, 1);
+}
+
+#copyright {position: fixed;
   width: 70%;
+  bottom: 0;
   text-align: center;
-  margin: auto;
-  margin-top: 20px;
+  padding-bottom: 10px;
   font-family: 'Philosopher', sans-serif;
   color: #480f53;
   border-top: 1px solid #522379;
+}
+
+@media(min-width:500px) {
+
+  #inkScratch {
+    font-size: 18pt;
+  }
 }

@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="CSS/registration.css">
+  <link rel="stylesheet" href="./CSS/rosaDePedra.css">
   <meta name="author" content="Hosama Oliveira">
   <meta name="description" content="Inspirações em Crochê">
   <link rel="icon" href="Rosa_de_Pedra_PNG/rosa1.png">
@@ -18,29 +19,29 @@
   </div> 
   <div id="background">
 
-    <section><legend>Cadastro</legend>
-
+    <section><legend id="textRegister">Cadastro</legend>
+      
       <h2 id="inkScratch">Cadastre-se e receba as novidades diretamente no seu e-mail.</h2>
 
       <div id="regis">
         <p><label for="cadName"><h3 id="hName">Nome</h3> 
           <input type="text" id="cadName" size="20" maxlength="200" placeholder="Digite seu nome."
+          onfocus="reset()"
         /></p>
         
         <p><label for="cadMail"><h3>E-mail</h3> 
-          <input type="email" id="cadMail" size="20" maxlength="100" placeholder="Digite seu email.">
+          <input type="email" id="cadMail" size="20" maxlength="100" placeholder="Digite seu email." onfocus="reset()">
         </p>
-      
-        <!-- <p><label for="cadPassword"><h3>Senha</h3> 
-          <input type="password" id="cadPassword" size="8" placeholder="8 Dígitos" maxlength="8"
-        /></p> -->
         
-        <button id="register">Cadastrar</button>  
+        <div class="divAnimatedButton">
+          <button id="register" class="animatedButton" onclick="register()">Cadastrar</button>  
+        </div>  
 
       </div>
 
     </section>
-    <p id="copyright"> Copyright &copy; 2021 - by Hosama Oliveira</p><br/>
   </div>
+  <p id="copyright"> Copyright &copy; 2021 - by Hosama Oliveira</p><br/>
+  <script src="./JS/rosaDePedra.js"></script>
 </body>
 </html>
