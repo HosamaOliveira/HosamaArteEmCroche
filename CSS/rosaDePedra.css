@@ -92,6 +92,7 @@ img#roseIcon {
 
 #bodySession {
   width: 100%;
+  padding: 10px 0 0 0;
   background-image: linear-gradient(to bottom, #e8e0eeb7, #c4b3da);
   /* background: url(../Rosa_de_Pedra_imagens/pexels7.jpg) no-repeat center/cover; */
 }
