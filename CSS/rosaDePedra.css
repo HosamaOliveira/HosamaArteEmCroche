@@ -93,13 +93,12 @@ img#roseIcon {
 #bodySession {
   width: 100%;
   padding: 10px 0 0 0;
-  background-image: linear-gradient(to bottom, #e8e0eeb7, #c4b3da);
-  /* background: url(../Rosa_de_Pedra_imagens/pexels7.jpg) no-repeat center/cover; */
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(243, 240, 248);
 }
 
 #subSession {
-  display: flex;
-  flex-direction: column;
   width: 100%;
   margin-top: 15px;
   /* background-color: #7a35e0; */
@@ -175,6 +174,12 @@ img#roseIcon {
   font-size: 14pt;
   text-shadow: none;
   color: #401758;
+}
+
+cite {
+  width: 70%;
+  word-wrap: break-word;
+  margin: auto;
 }
 
 /* Footer */
