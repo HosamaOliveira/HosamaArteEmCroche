@@ -8,25 +8,20 @@
   box-sizing: border-box;
 }
 
-/* * #body {  */
+:root {
+	--letterColor: #3a1955; 
+	--text-shadow: rgb(15, 6, 68) 0 1px 1px;
+}
 
-/* width: 100%; */
-
-/* height: 100%; */
-
-/*  */
-
-/* } */
-
-#main {
-  position: relative;
+main {
   display: flex;
   flex-direction: column;
+	align-items: center;
   margin: auto;
-  /* background-color: brown; */
-  width: 100%;
-  height: 100vh;
+	min-height: 100vh;
   -webkit-tap-highlight-color: transparent;
+	background-image: linear-gradient(rgba(218, 209, 224, 0.842), rgba(222, 191, 243, 0.842));
+	justify-content: space-between;
 }
 
 #header {
@@ -52,7 +47,7 @@ h1 {
   font-size: 18pt;
   margin-top: 5px;
   margin-left: 5px;
-  color: #3a1955;
+  color: var(--letterColor);
   text-shadow: 1px 2px 1px rgb(223, 187, 233);
 }
 
@@ -70,7 +65,7 @@ h1 {
 h2 {
   width: 60%;
   height: 20px;
-  color: #3a1955;
+  color: var(--letterColor);
   font-family: 'Parisienne', cursive;
   font-size: 14pt;
   margin-top: 40px;
@@ -91,17 +86,15 @@ img#roseIcon {
 /* corpo */
 
 #bodySession {
-  width: 100%;
-  padding: 10px 0 0 0;
+  padding-top:  20px;
   display: flex;
+	width: 100%;
   flex-direction: column;
-  background-color: rgb(243, 240, 248);
 }
 
 #subSession {
   width: 100%;
-  margin-top: 15px;
-  /* background-color: #7a35e0; */
+  /* margin-top: 15px; */
 }
 
 #hourAndDate {
@@ -117,8 +110,8 @@ img#roseIcon {
   left: 5px;
   padding: 10px;
   font-family: 'Philosopher', sans-serif;
-  color: rgb(43, 3, 51);
-  text-shadow: 0 1px 15px rgb(0, 0, 0);
+  color: var(--letterColor);
+  text-shadow: var(--text-shadow);
   opacity: 0;
 }
 
@@ -142,9 +135,9 @@ img#roseIcon {
   text-align: center;
   font-size: 17pt;
   padding: 10px;
-  font-family: 'Philosopher', sans-serif;
-  color: rgb(43, 3, 51);
-  text-shadow: rgb(70, 43, 226) 1px 1px 1px;
+  font-family: 'merienda', sans-serif;
+  color: var(--letterColor);
+  text-shadow: var(--text-shadow);
   box-shadow: rgba(44, 68, 77, 0.952) 3px 3px 10px 0px;
   border-radius: 5px;
   /* background-color: darkgreen; */
@@ -166,30 +159,34 @@ img#roseIcon {
   border-radius: 50%;
 }
 
-#textCrochet {
+q {
   /* background-color: hotpink; */
   width: 90%;
   margin: auto;
   margin-top: 20px;
   font-size: 14pt;
   text-shadow: none;
-  color: #401758;
+  color: var(--letterColor);
 }
 
 cite {
-  width: 70%;
+	color: transparent;
+	text-shadow: var(--letterColor) 0 1px 1px;
+	font-family: 'merienda', sans-serif;
+	font-size: 8pt;
   word-wrap: break-word;
   margin: auto;
 }
 
 /* Footer */
 
-#rodape {
+#footer {
   display: flex;
   flex-direction: column;
+	width: 100%;
   align-items: center;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 20px;
   background-image: linear-gradient(rgba(147, 87, 187, 0.815), rgba(220, 208, 228, 0.815));
   /* clear: both; */
 }

@@ -16,18 +16,6 @@ startTimer()
 // Função de navegação, menu lateral em index, fotos e videoClasses.html
 function navigate(page) {
   switch (page) {
-    case 'home':
-      location.href = './index.html'
-      break
-    case 'photos':
-      location.href = './fotos.html'
-      break
-    case 'revenues':
-      location.href = './revenues.html'
-      break
-    case 'videoClasses':
-      location.href = './videoClasses.html'
-      break
     case 'btRegistration':
       location.href = './registration.html'
       break

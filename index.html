@@ -8,7 +8,6 @@
   <meta name="description" content="Inspirações em Crochê">
   <link rel="icon" href="Rosa_de_Pedra_PNG/rosa1.png">
   <link rel="stylesheet" href="CSS/rosaDePedra.css">
-  <link rel="stylesheet" href="CSS/menuLateral.css">
   <title>Rosa de Pedra</title>
 </head>
 
@@ -17,6 +16,7 @@
   <main>
     
     <header id="header">
+			<lateral-menu></lateral-menu>
 
       <div id="head">
         
@@ -49,83 +49,41 @@
             alt="Gif Groot de crochê">
           </div>
           
-          <q id="textCrochet">Crochê ou croché (crochet, francês: [kʁɔʃɛ]) é o processo de criação de tecidos usando a agulha de crochê e algum fio contínuo, normalmente, lã, fio de algodão, seda etc. Mas também pode se usar arame, barbante ou outro material inovador. O trabalho de crochê geralmente se inicia após uma sequência de pontos chamados de ponto corrente que são contados, o número de pontos podem ser números definidos, números pares ou ímpares ou números múltiplos de números específicos para assim obter o motivo, padrão ou da peça acabada. Durante a confecção é possível fazer aumentos e diminuições de modo a moldar o formato do trabalho.</q> - <cite>https://pt.wikipedia.org/wiki/Crochê</cite>
+          <q id="textCrochet">Crochê ou croché (crochet, francês: [kʁɔʃɛ]) é o processo de criação de tecidos usando a agulha de crochê e algum fio contínuo, normalmente, lã, fio de algodão, seda etc. Mas também pode se usar arame, barbante ou outro material inovador. O trabalho de crochê geralmente se inicia após uma sequência de pontos chamados de ponto corrente que são contados, o número de pontos podem ser números definidos, números pares ou ímpares ou números múltiplos de números específicos para assim obter o motivo, padrão ou da peça acabada. Durante a confecção é possível fazer aumentos e diminuições de modo a moldar o formato do trabalho.</q> --- <cite>https://pt.wikipedia.org/wiki/Crochê</cite>
         </div>
         
       </div>
 
-      <footer id="rodape">
-
-        <div id="registrationFooter">
-        
-          <h3>Cadastre-se e receba as novidades diretamente no seu e-mail.</h3> 
-          
-          <div id="divButton">
-            <button class="btRegistration" id="button" onclick="navigate('btRegistration')">Cadastre-se</button>
-          </div>
-        
-        </div>
-  
-        <div id="iconFooter">
-
-          <a href="https://wa.me/5547992483265" target="blank" class="aFooter"><img src="Rosa_de_Pedra_PNG/whats5.png" class="imgFooter"></a>
-
-          <a href="https://www.facebook.com/Kafeskal" target="blank" class="aFooter"><img src="Rosa_de_Pedra_PNG/facebook5.png" class="imgFooter"></a>
-
-          <a href="https://www.instagram.com/hosamaoliveira/" target="blank" class="aFooter"><img src="Rosa_de_Pedra_PNG/instagram4.png" class="imgFooter"></a>
-        </div>
-  
-        <p id="copyright"> Copyright &copy; 2021 - by Hosama Oliveira</p><br/>
-  
-      </footer> 
     </section>
 
-    <nav id="wholeMenu">
+		<footer id="footer">
 
-      <input type="checkbox" id="menu-hamburguer">
-      
-      <label for="menu-hamburguer">
-        <div id="menu">
-          <span class="hamburguer"></span>
-        </div>
-      </label>
+			<div id="registrationFooter">
+			
+				<h3>Cadastre-se e receba as novidades diretamente no seu e-mail.</h3> 
+				
+				<div id="divButton">
+					<button class="btRegistration" id="button" onclick="navigate('btRegistration')">Cadastre-se</button>
+				</div>
+			
+			</div>
 
-      <div id="shadow" onclick="document.getElementById('menu-hamburguer').checked=false"></div>
-  
-      <nav id="sub-menu">
+			<div id="iconFooter">
 
-        <img src="Rosa_de_Pedra_PNG/folhas.png" id="sheets" title="Folhas secas" alt="Folhas secas">
-        
-        <div id="contentMenu">
-          <h1 id="subMenuTitle">Rosa de Pedra</h1>
+				<a href="https://wa.me/5547988870279" target="blank" class="aFooter"><img src="Rosa_de_Pedra_PNG/whats5.png" class="imgFooter"></a>
 
-          <div id="contentLink">  
-            <div class="link"><button class="naviMenu" id="home" onclick="navigate('home')">Home</button></div>
-            <div class="link"><button class="naviMenu" id="photos" onclick="navigate('photos')">Galeria</button></div>
-            <div class="link"><button class="naviMenu" id="videoClasses" onclick="navigate('videoClasses')  ">Vídeo-Aulas</button></div>
-          </div>
+				<a href="https://www.facebook.com/Kafeskal" target="blank" class="aFooter"><img src="Rosa_de_Pedra_PNG/facebook5.png" class="imgFooter"></a>
 
-          <div id="iconLink">
+				<a href="https://www.instagram.com/hosamaoliveira/" target="blank" class="aFooter"><img src="Rosa_de_Pedra_PNG/instagram4.png" class="imgFooter"></a>
+			</div>
 
-            <img src="Rosa_de_Pedra_PNG/caveiraCrochê.png" id="skull" title="Caveira com agulhas de crochê no cabelo" alt="Caveira com agulhas de crochê no cabelo">
+			<p id="copyright"> Copyright &copy; 2021 - by Hosama Oliveira</p><br/>
 
-            <div id="ico">
-
-              <a href="https://wa.me/5547992483265" target="blank" class="linkIcon" ><img class="ic"  src="Rosa_de_Pedra_PNG/whats5.png"   alt="Whats"><br></a>
-
-              <a href="https://www.facebook.com/Kafeskal/?ref=pages_you_manage" target="blank"  class="linkIcon"><img   class="ic" src="Rosa_de_Pedra_PNG/facebook5.png" alt="facebook"><br></a>
-
-              <a href="https://www.instagram.com/hosamaoliveira/" target="blank" class="linkIcon"><img class="ic" src="Rosa_de_Pedra_PNG/instagram4.png" alt="instagram"><br></a>
-
-            </div>
-          </div>
-        </div>
-      </nav>
-  
-    </nav>
-      
+		</footer> 
+   
   </main>
 
   <script src="./JS/rosaDePedra.js"></script>
+	<script src="./menuComponent.js"></script>
 </body>
 </html>
