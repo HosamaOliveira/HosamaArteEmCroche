@@ -6,10 +6,6 @@ template.innerHTML = /*html*/`
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Philosopher:ital,wght@0,700;1,400;1,700&display=swap');
 
-:root {
-	--letterColor: rgb(226, 176, 245);
-}
-
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Comfortaa', cursive; }
 
 
@@ -28,32 +24,28 @@ template.innerHTML = /*html*/`
   border-radius: 50%;
   overflow: hidden;
   transition: box-shadow 1.1s cubic-bezier(.19, 1, .22, 1);
-  cursor: pointer;
-  z-index: 2;
+  cursor: url(./iconsComponent/cursor2.png), default;
+  z-index: 3;
 	-webkit-tap-highlight-color: transparent;
 }
 
-#shadow {
+#sideMenuShadow {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: #black;
+  background-color: #a28cc2bb;
   transform: scale(0);
+  z-index: 1;
 }
 
 #burgerMenu:checked~#menu {
   background-color: #a28cc2;
 }
 
-#burgerMenu:checked~#shadow {
+#burgerMenu:checked~#sideMenuShadow {
   transform: scale(1);
-  animation: fade linear .2s;
-}
-
-#burgerMenu:not(:checked)~#shadow {
-  animation: fadeOut linear .5s;
 }
 
 .burguer {
@@ -63,7 +55,7 @@ template.innerHTML = /*html*/`
   width: 45%;
   height: 2px;
   transition: .5s ease-in-out;
-  z-index: 1;
+  z-index: 2;
 }
 
 .burguer:before, .burguer:after {
@@ -116,17 +108,19 @@ input {
   position: fixed;
   text-align: center;
   align-items:center;
-  width: 300px;
+  width: 250px;
   height: 100vh;
   right: -400px;
 	top: 0;
 	padding-bottom: 10px;
-  background-image: linear-gradient(rgba(165, 94, 209, 0.842), rgba(196, 174, 209, 0.842));
-  box-shadow: 0 0 10px 4px #11002bdc;
+  background-image: linear-gradient(rgb(165, 94, 209), rgb(196, 174, 209));
+  box-shadow: 0 0 5px 1px #11002bdc;
   transition: 1s;
   overflow-y: auto;
   overflow-x: hidden;
 	z-index: 1;
+  -webkit-tap-highlight-color: transparent;
+  cursor: url(./iconsComponent/cursor.png), default;
 }
 
 input:checked~#sub-menu {
@@ -139,7 +133,7 @@ input:checked~#sub-menu {
 	width: 100%;
 	padding: 10px;
 	font-size: 20pt;
-	margin-right: 50px;
+	margin-right: 30px;
 	margin-top: 25px;
 	color: rgb(226, 176, 245);
 	text-shadow: 0 4px 2px rgb(89, 35, 117), 0px 5px 2px rgb(168, 81, 226);
@@ -152,7 +146,7 @@ input:checked~#sub-menu {
 	gap: 50px;
   width: 90%;
 	padding: 10px;
-	margin-top: 50px;
+	margin-top: 40px;
 }
 
 #contentLink {
@@ -187,6 +181,7 @@ input:checked~#sub-menu {
   transition: all 0.3s;
   background-image: linear-gradient(rgb(147, 87, 187), rgb(214, 173, 230));
 	box-shadow: #39145c 0 1px 2px .1px;
+  cursor: url(./iconsComponent/cursor2.png), default;
 }
 
 .naviMenu::before {
@@ -253,10 +248,11 @@ input:checked~#sub-menu {
 #socialNetworkText {
 	border-radius: 5px;
 	padding: 10px;
-	box-shadow: #39145c 0 3px 5px .2px;
-	font-size: 20pt;
+  text-shadow: 0px 0px 10px #2d0f41;
+	/*box-shadow: #39145c 0 3px 3px .2px;*/
+	font-size: 15pt;
 	color: #2d0f41;
-	background-image: linear-gradient(rgb(147, 87, 187), rgb(214, 173, 230));
+	/*background-image: linear-gradient(rgb(147, 87, 187), rgb(214, 173, 230));*/
 }
 
 p {
@@ -269,6 +265,7 @@ p {
 
 a {
 	text-decoration: none;
+  cursor: url(./iconsComponent/cursor2.png), default;
 }
 
 .linkIcon {
@@ -287,13 +284,16 @@ a {
   border-radius: 1ex;
 }
 
+#hand {
+  filter: hue-rotate(320deg);
+}
 
 </style>
 
 <!-- ------------------------------HTML------------------------------------ -->
 <aside>
 
-	<input type="checkbox" id="burgerMenu">
+	<input type="checkbox" id="burgerMenu" checked>
 
 	<label for="burgerMenu">
         
@@ -303,8 +303,7 @@ a {
 
 	</label>
 
-	<!-- <div id="shadow" onclick="document.getElementById('burgerMenu').checked=false"></div> -->
-		
+  <div id="sideMenuShadow"></div>
 		
 	<nav id="sub-menu">
 
@@ -318,7 +317,7 @@ a {
 				<div class="link"><a href="./videoClasses.html" target="_blank"><button class="naviMenu" id="videoClasses">Vídeo-Aulas</button></a></div>
 			</div>
 
-			<div id="socialNetworkText">Acesse nossas redes sociais <p>&#128071</p></div>
+			<div id="socialNetworkText">Acesse nossas redes sociais <p id="hand">&#128071</p></div>
 		</div>
 
 		<div id="ico">
@@ -347,10 +346,14 @@ class LateralMenu extends HTMLElement {
   }
 
   build() {
-    const shadow = this.attachShadow({'mode': 'open'})
+    this.attachShadow({'mode': 'open'})
     this.shadowRoot.appendChild(template.content.cloneNode(true))
+
+    this.shadowRoot.querySelector('#sideMenuShadow').onclick = () => {
+      this.shadowRoot.querySelector('#burgerMenu').checked=false
+    }
+
   }
-	
 }
 
 
