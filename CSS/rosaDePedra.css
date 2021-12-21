@@ -8,6 +8,26 @@
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  background: transparent;
+  width: 8px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #612c7d4d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #612c7d;
+  box-shadow: inset 0px 0px 5px #00000080;
+}
+
+::selection { /*texto selecionado pelo mouse*/
+  background: rgb(49, 16, 80);
+  color: #ffffff;
+}
+
 :root {
 	--letterColor: #3a1955; 
 	--text-shadow: rgb(15, 6, 68) 0 1px 1px;
@@ -22,6 +42,7 @@ main {
   -webkit-tap-highlight-color: transparent;
 	background-image: linear-gradient(rgba(218, 209, 224, 0.842), rgba(222, 191, 243, 0.842));
 	justify-content: space-between;
+  cursor: url(../Rosa_de_Pedra_PNG/cursor.png), default;
 }
 
 #header {
@@ -34,12 +55,14 @@ main {
 
 #head {
   width: 100%;
-  /* background-color: rgb(11, 47, 65); */
 }
 
 #siteName {
   display: flex;
-  /* background-color: lightseagreen; */
+}
+
+a {
+  cursor: url(../Rosa_de_Pedra_PNG/cursor2.png), default;
 }
 
 h1 {
@@ -55,10 +78,10 @@ h1 {
   background: none;
   border: none;
   cursor: pointer;
+  cursor: url(../Rosa_de_Pedra_PNG/cursor2.png), default;
 }
 
 #phrase {
-  /* background-color: lightcoral; */
   width: 100%;
 }
 
@@ -71,7 +94,6 @@ h2 {
   margin-top: 40px;
   margin-left: 60px;
   text-shadow: 1px 2px 1px rgba(140, 95, 156, 0.6);
-  /* background-color: chocolate; */
 }
 
 img#roseIcon {
@@ -80,7 +102,6 @@ img#roseIcon {
   height: 70px;
   margin-top: 60px;
   margin-left: -5px;
-  /* background-color: indigo; */
 }
 
 /* corpo */
@@ -94,7 +115,6 @@ img#roseIcon {
 
 #subSession {
   width: 100%;
-  /* margin-top: 15px; */
 }
 
 #hourAndDate {
@@ -140,7 +160,6 @@ img#roseIcon {
   text-shadow: var(--text-shadow);
   box-shadow: rgba(44, 68, 77, 0.952) 3px 3px 10px 0px;
   border-radius: 5px;
-  /* background-color: darkgreen; */
 }
 
 #groot {
@@ -150,7 +169,6 @@ img#roseIcon {
   margin-top: 10px;
   border-radius: 50%;
   box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.781);
-  /* background-color: #3a1955; */
 }
 
 #grootImg {
@@ -160,7 +178,6 @@ img#roseIcon {
 }
 
 q {
-  /* background-color: hotpink; */
   width: 90%;
   margin: auto;
   margin-top: 20px;
@@ -239,6 +256,7 @@ h3 {
   position: relative;
   padding: 10px;
   margin-bottom: 8px;
+  cursor: url(../Rosa_de_Pedra_PNG/cursor2.png), default;
 }
 
 #button::before {
@@ -294,13 +312,10 @@ h3 {
   margin-top: 10px;
   margin: auto;
   transition: transform .5s;
-  /* background-color: blue; */
 }
 
 .imgFooter {
-  /* background-color: aqua; */
   width: 50px;
-  /* margin-bottom: 40px; */
 }
 
 #copyright {

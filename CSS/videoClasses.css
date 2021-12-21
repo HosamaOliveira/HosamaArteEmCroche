@@ -6,20 +6,35 @@
 
 * {margin: 0; padding: 0; box-sizing: border-box;}
 
-/* * #body {  */
-  /* width: 100%; */
-  /* height: 100%; */
-  /*  */
-/* } */
+::-webkit-scrollbar {
+  background: transparent;
+  width: 8px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #612c7d4d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #612c7d;
+  box-shadow: inset 0px 0px 5px #00000080;
+}
+
+::selection { /*texto selecionado pelo mouse*/
+  background: rgb(49, 16, 80);
+  color: #ffffff;
+}
 
 #interface {
   position: relative;
   display: flex;
   flex-direction: column;
   margin: auto;
-  /* background-color: brown; */
+  -webkit-tap-highlight-color: transparent;
   width:100%;
   height: 100vh;
+  cursor: url(../Rosa_de_Pedra_PNG/cursor.png), default;
 }
 
 #header {
@@ -53,7 +68,7 @@ h1 {
 .title {
   background: none;
   border: none;
-  cursor: pointer;
+  cursor: url(../Rosa_de_Pedra_PNG/cursor2.png), default;
 }
 
 #phrase {
@@ -138,6 +153,7 @@ img#roseIcon {
   padding: 5px;
   font-size: 16pt;
   border-radius: 5px;
+  cursor: url(../Rosa_de_Pedra_PNG/cursor.png), default;
 }
 
 @media (max-width:900px) {

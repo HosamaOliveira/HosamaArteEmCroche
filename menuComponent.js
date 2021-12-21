@@ -8,9 +8,6 @@ template.innerHTML = /*html*/`
 
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Comfortaa', cursive; }
 
-
-
-
 #menu {
   display: flex;
   align-items: center;
@@ -46,7 +43,13 @@ template.innerHTML = /*html*/`
 
 #burgerMenu:checked~#sideMenuShadow {
   transform: scale(1);
+  animation: fade linear .5s;
 }
+
+/*#burgerMenu:checked~#sideMenuShadow {
+  transform: scale(1);
+  transition: all 1s ease-in-out;
+}*/
 
 .burguer {
   position: relative;
@@ -162,7 +165,6 @@ input:checked~#sub-menu {
   height: 35px;
   margin-top: 25px;
   text-align: center;
-  cursor: pointer;
   color: rgb(27, 16, 48);
   transition: all 0.3s;
   position: relative;
@@ -288,12 +290,21 @@ a {
   filter: hue-rotate(320deg);
 }
 
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 </style>
 
 <!-- ------------------------------HTML------------------------------------ -->
 <aside>
 
-	<input type="checkbox" id="burgerMenu" checked>
+	<input type="checkbox" id="burgerMenu">
 
 	<label for="burgerMenu">
         
@@ -303,7 +314,7 @@ a {
 
 	</label>
 
-  <div id="sideMenuShadow"></div>
+  <div id="sideMenuShadow" class="fade"></div>
 		
 	<nav id="sub-menu">
 
